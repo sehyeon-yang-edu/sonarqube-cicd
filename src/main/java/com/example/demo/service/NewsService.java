@@ -14,7 +14,7 @@ import java.util.List;
 @Service
 public class NewsService {
 
-    private static final String GOOGLE_NEWS_RSS_URL = "https://news.google.com/rss/search?q=%ED%98%84%EB%8C%80%EC%9C%84%EC%95%84&hl=ko&gl=KR&ceid=KR:ko";
+    private static final String GOOGLE_NEWS_RSS_URL = "https://news.google.com/rss/search?q=bitcoin=ko&gl=KR&ceid=KR:ko";
 
     public List<NewsItem> getLatestNews() {
         List<NewsItem> newsItems = new ArrayList<>();
@@ -27,8 +27,7 @@ public class NewsService {
                 newsItems.add(new NewsItem(
                         entry.getTitle(),
                         entry.getLink(),
-                        entry.getPublishedDate()
-                ));
+                        entry.getPublishedDate()));
                 // limit to top 15 news for display
                 if (newsItems.size() >= 15) {
                     break;
