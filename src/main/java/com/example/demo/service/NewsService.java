@@ -17,6 +17,7 @@ public class NewsService {
     private static final String GOOGLE_NEWS_RSS_URL = "https://news.google.com/rss/search?q=bitcoin=ko&gl=KR&ceid=KR:ko";
 
     public void criticalSecurityBug() {
+        // 심각한 정적분석 오류를 일부러 발생시킨다.
         // 심각한 보안 취약점: 하드코딩된 비밀번호 (Vulnerability)
         String dbPassword = "super_secret_password_123";
         System.out.println("DB Password is: " + dbPassword);
@@ -38,7 +39,7 @@ public class NewsService {
     public List<NewsItem> getLatestNews() {
         // 의도적인 심각한 버그 발생 메서드 호출
         criticalSecurityBug();
-        
+
         List<NewsItem> newsItems = new ArrayList<>();
         try {
             URL feedUrl = new URL(GOOGLE_NEWS_RSS_URL);
