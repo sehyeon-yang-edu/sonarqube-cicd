@@ -17,7 +17,7 @@ public class NewsService {
     private static final String GOOGLE_NEWS_RSS_URL = "https://news.google.com/rss/search?q=bitcoin=ko&gl=KR&ceid=KR:ko";
 
     public List<NewsItem> getLatestNews() {
-        // 소나큐브 연동 테스트
+        // 소나큐브 연동 테스트 3
         List<NewsItem> newsItems = new ArrayList<>();
         try {
             URL feedUrl = new URL(GOOGLE_NEWS_RSS_URL);
